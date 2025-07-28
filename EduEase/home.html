@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Home</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+   <style>
+      /* Ensure the boxes are rectangular */
+      .home-grid .box {
+         width: 48%; /* Adjust width for all boxes */
+         height: 250px; /* Set height to make them rectangular */
+         margin: 10px;
+         padding: 20px;
+         border-radius: 8px;
+         box-sizing: border-box;
+         text-align: center;
+         transition: 0.3s;
+         display: inline-block;
+      }
+
+      /* Adjust size for specific boxes */
+      .home-grid .box.gamification, 
+      .home-grid .box.quiz, 
+      .home-grid .box.story, 
+      .home-grid .box.audiobooks {
+         width: 22%; /* Set smaller size */
+         height: 200px; /* Adjust height */
+      }
+
+      /* Keep spacing consistent */
+      .home-grid .box-container {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+      }
+   </style>
+</head>
+<body>
+
+   <header class="header">
+      <section class="flex">
+         <a href="home.html" class="logo">
+            <span style="font-weight: bold; font-size: 30px; color: #000000;">Edu-Ease:Your Personalized Learning Companion</span>
+         </a>
+         
+         <!-- Google Custom Search Engine -->
+         <div class="gcse-search"></div>
+         <script async src="https://cse.google.com/cse.js?cx=2064a7e21ddb64a71"></script>
+   
+         <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <div id="search-btn" class="fas fa-search"></div>
+            <div id="user-btn" class="fas fa-user"></div>
+            <div id="toggle-btn" class="fas fa-sun"></div>
+         </div>
+         <div class="profile">
+            <img src="images/pic-1.jpg" class="image" alt="">
+            <h3 class="name">Dr Suraj</h3>
+            <p class="role">Student</p>
+            <a href="profile.html" class="btn">view profile</a>
+            <div class="flex-btn">
+               <a href="./login.html" class="option-btn" style="background-color: #270718; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Login</a>
+               <a href="./register.html" class="option-btn" style="background-color: #290820; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Register</a>
+            </div>
+         </div>
+      </section>
+   </header>
+
+   <!-- Accessibility Master Toggle -->
+   <div id="accessibility-toggle" class="fixed-toggle" aria-label="Accessibility Features" tabindex="0">
+     <label>
+       <input type="checkbox" id="toggle-tts" aria-checked="false" aria-label="Enable Text Reader (TTS)" />
+       Enable Text Reader (TTS)
+     </label>
+     <label>
+       <input type="checkbox" id="toggle-voice" aria-checked="false" aria-label="Enable Voice Navigation" />
+       Enable Voice Navigation
+     </label>
+   </div>
+
+   <!-- Voice Status Indicator -->
+   <div id="voice-status" style="position:fixed;top:80px;right:20px;z-index:1100;background:#fff;color:#220d2b;padding:8px 16px;border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,0.12);display:none;font-size:1.2rem;">Voice: <span id="voice-status-text">Inactive</span></div>
+
+<div class="side-bar">
+   <div id="close-btn">
+      <i class="fas fa-times"></i>
+   </div>
+
+   <div class="profile">
+      <img src="images/pic-1.jpg" class="image" alt="">
+      <h3 class="name">Suraj</h3>
+      <p class="role">Student</p>
+      <a href="profile.html" class="btn">view profile</a>
+   </div>
+
+   <nav class="navbar">
+      <a href="home.html"><i class="fas fa-home"></i><span>Home</span></a>
+      <a href="about.html"><i class="fas fa-question"></i><span>About</span></a>
+      <a href="courses.html"><i class="fas fa-graduation-cap"></i><span>Courses</span></a>
+      <a href="teachers.html"><i class="fas fa-chalkboard-user"></i><span>Teachers</span></a>
+      <a href="contact.html"><i class="fas fa-headset"></i><span>Contact us</span></a>
+      <a href="scene-audio.html"><i class="fas fa-image"></i><span>Scene to Audio</span></a>
+      <a href="object-detect.html"><i class="fas fa-eye"></i><span>Object Detection</span></a>
+      <a href="ocr.html"><i class="fas fa-file-alt"></i><span>OCR</span></a>
+   </nav>
+</div>
+
+<section class="home-grid">
+   <h1 class="heading">Activities!!</h1>
+   <div class="box-container">
+      <div class="box gamification">
+         <h3 class="title">Gamification</h3>
+         <p class="description">Engage with learning through game-like features!</p>
+         <a href="https://gamificationnishprro.netlify.app/" class="inline-btn">Explore</a>
+      </div>
+      <div class="box audiobooks">
+         <h3 class="title">Audiobooks</h3>
+         <p class="description">Listen to your favorite books on the go!</p>
+         <a href="javascript:void(0);" class="inline-btn" id="explore-audiobooks">Explore</a>
+      
+         <!-- Dropdown List (Initially hidden) -->
+         <div id="audiobooks-dropdown" class="dropdown-list" style="display: none;">
+            <a href="https://loquacious-kelpie-2fd3e2.netlify.app/" target="_blank">Upload</a>
+            <a href="https://www.everand.com/audiobooks/Science-Mathematics/Mathematics" target="_blank">Listen</a>
+         </div>
+      </div>
+      
+      
+
+      <div class="box quiz">
+         <h3 class="title">Quiz</h3>
+         <p class="description">Test your knowledge with interactive quizzes.</p>
+         <a href="https://quizni.netlify.app/" class="inline-btn">Start</a>
+      </div>
+
+      <div class="box story">
+         <h3 class="title">Books</h3>
+         <p class="description">Browse and discover new books to read.</p>
+         <a href="https://www.education.com/stories/math/" class="inline-btn">Browse</a>
+      </div>
+   </div>
+</section>
+
+<section class="courses">
+   <h1 class="heading">Courses</h1>
+
+   <div class="box-container">
+      <div class="box">
+         <div class="tutor">
+            <img src="images/kan.png" alt=""> <!-- Updated Image -->
+            <div class="info">
+               <h3>Kannada</h3>
+               <span>21-10-2022</span>
+            </div>
+         </div>
+         <div class="thumb">
+            <img src="images/kan.jpeg" alt=""> <!-- Updated Image -->
+            <span>10 videos</span>
+         </div>
+         <h3 class="title"></h3>
+         <a href="playlist.html" class="inline-btn">view playlist</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+            <img src="images/a.webp" alt=""> <!-- Updated Image -->
+            <div class="info">
+               <h3>English</h3>
+               <span>21-10-2022</span>
+            </div>
+         </div>
+         <div class="thumb">
+            <img src="images/eng.jpeg" alt=""> <!-- Updated Image -->
+            <span>10 videos</span>
+         </div>
+         <h3 class="title"></h3>
+         <a href="playlist.html" class="inline-btn">view playlist</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+            <img src="images/hin.jpeg" alt=""> <!-- Updated Image -->
+            <div class="info">
+               <h3>Hindi</h3>
+               <span>21-10-2022</span>
+            </div>
+         </div>
+         <div class="thumb">
+            <img src="images/hindi.jpeg" alt=""> <!-- Updated Image -->
+            <span>10 videos</span>
+         </div>
+         <h3 class="title"></h3>
+         <a href="playlist.html" class="inline-btn">view playlist</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+            <img src="images/ma.webp" alt=""> <!-- Updated Image -->
+            <div class="info">
+               <h3>Mathematics</h3>
+               <span>21-10-2022</span>
+            </div>
+         </div>
+         <div class="thumb">
+            <img src="images/maths.jpeg" alt=""> <!-- Updated Image -->
+            <span>10 videos</span>
+         </div>
+         <h3 class="title"></h3>
+         <a href="playlist.html" class="inline-btn">view playlist</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+            <img src="images/sci.webp" alt=""> <!-- Updated Image -->
+            <div class="info">
+               <h3>Science</h3>
+               <span>21-10-2022</span>
+            </div>
+         </div>
+         <div class="thumb">
+            <img src="images/sci.jpeg" alt=""> <!-- Updated Image -->
+            <span>10 videos</span>
+         </div>
+         <h3 class="title"></h3>
+         <a href="playlist.html" class="inline-btn">view playlist</a>
+      </div>
+   </div>
+</section>
+
+<!-- custom js file link -->
+<script src="js/script.js"></script>
+
+<!-- Accessibility Scripts -->
+<script src="js/toggle.js"></script>
+<script src="js/tts.js"></script>
+<script src="js/voiceControl.js"></script>
+
+</body>
+</html>

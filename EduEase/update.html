@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>update</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<header class="header">
+   
+   <section class="flex">
+
+      <a href="home.html" class="logo">
+         <span style="font-weight: bold; font-size: 30px; color: #000000;">Edu-Ease:Your Personalized Learning Companion</span>
+      </a>
+
+      <form action="search.html" method="post" class="search-form">
+         <input type="text" name="search_box" required placeholder="Search courses..." maxlength="100">
+         <button type="submit" class="fas fa-search"></button>
+      </form>
+
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="search-btn" class="fas fa-search"></div>
+         <div id="user-btn" class="fas fa-user"></div>
+         <div id="toggle-btn" class="fas fa-sun"></div>
+      </div>
+
+      <div class="profile">
+         <img src="images/pic-1.jpg" class="image" alt="">
+         <h3 class="name">Suraj</h3>
+         <p class="role">Student</p>
+         <a href="profile.html" class="btn">View profile</a>
+         <div class="flex-btn">
+            <a href="login.html" class="option-btn" style="background-color: #270718; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Login</a>
+            <a href="register.html" class="option-btn" style="background-color: #290820; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Register</a>
+            
+         </div>
+      </div>
+
+   </section>
+
+</header>   
+
+<div class="side-bar">
+
+   <div id="close-btn">
+      <i class="fas fa-times"></i>
+   </div>
+
+   <div class="profile">
+      <img src="images/pic-1.jpg" class="image" alt="">
+      <h3 class="name">Suraj</h3>
+      <p class="role">Student</p>
+      <a href="profile.html" class="btn">View profile</a>
+   </div>
+
+   <nav class="navbar">
+      <a href="home.html"><i class="fas fa-home"></i><span>Home</span></a>
+      <a href="about.html"><i class="fas fa-question"></i><span>About</span></a>
+      <a href="courses.html"><i class="fas fa-graduation-cap"></i><span>Courses</span></a>
+      <a href="teachers.html"><i class="fas fa-chalkboard-user"></i><span>Teachers</span></a>
+      <a href="contact.html"><i class="fas fa-headset"></i><span>Contact us</span></a>
+      <a href="scene-audio.html"><i class="fas fa-image"></i><span>Scene to Audio</span></a>
+      <a href="object-detect.html"><i class="fas fa-eye"></i><span>Object Detection</span></a>
+      <a href="ocr.html"><i class="fas fa-file-alt"></i><span>OCR</span></a>
+   </nav>
+
+</div>
+
+<section class="form-container">
+
+   <form action="" method="post" enctype="multipart/form-data">
+      <h3>Update Profile</h3>
+      <p>Update name</p>
+      <input type="text" name="name" placeholder="Yo" maxlength="50" class="box">
+      <p>Update Email</p>
+      <input type="email" name="email" placeholder="@gmail.com" maxlength="50" class="box">
+      <p>Previous password</p>
+      <input type="password" name="old_pass" placeholder="Enter your old password" maxlength="20" class="box">
+      <p>New password</p>
+      <input type="password" name="new_pass" placeholder="Enter your old password" maxlength="20" class="box">
+      <p>Confirm password</p>
+      <input type="password" name="c_pass" placeholder="Confirm your new password" maxlength="20" class="box">
+      <p>Update pic</p>
+      <input type="file" accept="image/*" class="box">
+      <input type="submit" value="update profile" name="submit" class="btn">
+   </form>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+
+   
+   
+   &copy;  Copyright @ 2024 by <span>Team Meticulous</span> | All rights reserved!
+
+</footer>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+<script src="js/toggle.js"></script>
+<script src="js/tts.js"></script>
+<script src="js/voiceControl.js"></script>
+
+   
+</body>
+</html>

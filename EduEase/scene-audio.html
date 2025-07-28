@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scene to Audio</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <section class="flex">
+      <a href="home.html" class="logo">
+        <span style="font-weight: bold; font-size: 30px; color: #000000;">Edu-Ease:Your Personalized Learning Companion</span>
+      </a>
+      <nav class="navbar">
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="courses.html">Courses</a>
+        <a href="teachers.html">Teachers</a>
+        <a href="contact.html">Contact us</a>
+        <a href="scene-audio.html">Scene to Audio</a>
+      </nav>
+    </section>
+  </header>
+
+  <!-- Accessibility Master Toggle -->
+  <div id="accessibility-toggle" class="fixed-toggle" aria-label="Accessibility Features" tabindex="0">
+    <label>
+      <input type="checkbox" id="toggle-tts" aria-checked="false" aria-label="Enable Text Reader (TTS)" />
+      Enable Text Reader (TTS)
+    </label>
+    <label>
+      <input type="checkbox" id="toggle-voice" aria-checked="false" aria-label="Enable Voice Navigation" />
+      Enable Voice Navigation
+    </label>
+  </div>
+
+  <!-- Sidebar Navigation -->
+  <div class="side-bar">
+    <div id="close-btn">
+      <i class="fas fa-times"></i>
+    </div>
+    <div class="profile">
+      <img src="images/pic-1.jpg" class="image" alt="">
+      <h3 class="name">Suraj</h3>
+      <p class="role">Student</p>
+      <a href="profile.html" class="btn">view profile</a>
+    </div>
+    <nav class="navbar">
+      <a href="home.html"><i class="fas fa-home"></i><span>Home</span></a>
+      <a href="about.html"><i class="fas fa-question"></i><span>About</span></a>
+      <a href="courses.html"><i class="fas fa-graduation-cap"></i><span>Courses</span></a>
+      <a href="teachers.html"><i class="fas fa-chalkboard-user"></i><span>Teachers</span></a>
+      <a href="contact.html"><i class="fas fa-headset"></i><span>Contact us</span></a>
+      <a href="scene-audio.html"><i class="fas fa-image"></i><span>Scene to Audio</span></a>
+      <a href="object-detect.html"><i class="fas fa-eye"></i><span>Object Detection</span></a>
+      <a href="ocr.html"><i class="fas fa-file-alt"></i><span>OCR</span></a>
+    </nav>
+  </div>
+
+  <main style="max-width: 600px; margin: 60px auto 0 auto; padding: 2rem; background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+    <h1 class="heading">Image to Audio (Scene Description)</h1>
+    <form id="scene-form">
+      <label for="scene-image">Upload an image:</label>
+      <input type="file" id="scene-image" accept="image/*" />
+      <br><br>
+      <button type="button" id="open-webcam">Use Webcam</button>
+      <button type="submit">Describe Scene</button>
+    </form>
+    <div id="webcam-container" style="display:none; margin-top: 1rem;">
+      <video id="webcam" width="320" height="240" autoplay></video>
+      <button type="button" id="capture-webcam">Capture</button>
+      <canvas id="webcam-canvas" width="320" height="240" style="display:none;"></canvas>
+    </div>
+    <div id="scene-result" style="margin-top: 2rem; font-size: 1.2rem;"></div>
+  </main>
+
+  <script src="js/toggle.js"></script>
+  <script src="js/tts.js"></script>
+  <script src="js/voiceControl.js"></script>
+  <script src="js/sceneAudio.js"></script>
+</body>
+</html> 
